@@ -6,8 +6,12 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
+/**
+ * @author Wyatt Hoodes
+ */
 public class SchoolBelt extends Application {
 
+    //Sets up the initial window
     private GridPane root = new GridPane();
     private HBox buttonBox = new HBox(20);
     private Button calcButton = new Button("Simple Calculator");
@@ -15,6 +19,7 @@ public class SchoolBelt extends Application {
 
     public void start(Stage stage){
 
+        //Open CalculatorFX with this button.
         calcButton.setOnAction(e -> {
             CalculatorFX calc = new CalculatorFX();
             Stage calcStage = new Stage();
@@ -22,6 +27,7 @@ public class SchoolBelt extends Application {
             calcStage.show();
         });
 
+        //Open TextEditorFx with this button.
         textButton.setOnAction(e -> {
             TextEditorFX text = new TextEditorFX();
             Stage textStage = new Stage();
@@ -29,6 +35,7 @@ public class SchoolBelt extends Application {
             textStage.setHeight(400);
             textStage.show();
         });
+
 
         buttonBox.getChildren().addAll(calcButton, textButton);
         root.add(buttonBox, 1, 3);
@@ -44,4 +51,5 @@ public class SchoolBelt extends Application {
         stage.setResizable(false);
         stage.show();
     }
+
 }

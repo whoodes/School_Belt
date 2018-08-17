@@ -9,9 +9,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 
-/*
- * Wyatt Hoodes
- * +Assignment11, -displayResultsHandle, -operatorHandle
+/**
+ * @author Wyatt Hoodes
  */
 class CalculatorFX {
 
@@ -142,9 +141,7 @@ class CalculatorFX {
      *
      * @return The root node as a GridPane.
      */
-    GridPane getRoot(){
-        return root;
-    }
+    GridPane getRoot(){ return root; }
 
     /**
      * Displays the result of the operation based on user input.
@@ -214,4 +211,5 @@ class CalculatorFX {
             }
         }
     }
+
 }

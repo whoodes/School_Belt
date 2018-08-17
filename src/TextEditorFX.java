@@ -15,15 +15,14 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-/*
- * Wyatt Hoodes
- * +TextEditorFX
- * Core Concept: the ability to perform file I/O using javafx
- * Date: 04/08/18
+/**
+ * Text editor GUI class.
+ *
+ * @author Wyatt Hoodes
  */
 public class TextEditorFX {
 
-    private final Menu file = new Menu("File");
+    private final Menu FILE = new Menu("File");
 
     private  BorderPane root = new BorderPane();
 
@@ -41,10 +40,14 @@ public class TextEditorFX {
     private MenuItem open = new MenuItem("Open...\t\t\t\t");
     private MenuItem save = new MenuItem("Save...");
 
-    public TextEditorFX(){
-        load();
-    }
+    /**
+     * Constructor for a TextEditor
+     */
+    public TextEditorFX(){ load(); }
 
+    /**
+     * A method to load up the text editor.
+     */
     public void load(){
 
 
@@ -60,7 +63,7 @@ public class TextEditorFX {
         //Setting the action for "Open" event//
         open.setOnAction((ActionEvent event) -> {
 
-            //Create a new FileChooser and assign a new file to the FileChooser dialog//
+            //Create a new FileChooser and assign a new FILE to the FileChooser dialog//
             FileChooser myFile = new FileChooser();
             File openFile = myFile.showOpenDialog(new Stage());
 
@@ -89,7 +92,7 @@ public class TextEditorFX {
         //Setting the action for "Save" event//
         save.setOnAction((ActionEvent event) -> {
 
-            //Create a new FileChooser and assign a new file to the FileChooser dialog//
+            //Create a new FileChooser and assign a new FILE to the FileChooser dialog//
             FileChooser myFile = new FileChooser();
             File saveFile = myFile.showSaveDialog(new Stage());
 
@@ -111,9 +114,9 @@ public class TextEditorFX {
 
         });
 
-        //Add the items to the file menu, add the file menu to the bar, display the menu bar
-        file.getItems().addAll(open, save);
-        mainMenu.getMenus().add(file);
+        //Add the items to the FILE menu, add the FILE menu to the bar, display the menu bar
+        FILE.getItems().addAll(open, save);
+        mainMenu.getMenus().add(FILE);
         mainMenu.setUseSystemMenuBar(true);
 
 
@@ -122,8 +125,6 @@ public class TextEditorFX {
         root.setStyle("-fx-padding: 10 20 10 20; -fx-border-color: black;");
     }
 
-    public BorderPane getRoot(){
-        return root;
-    }
+    public BorderPane getRoot(){ return root; }
 
 }
