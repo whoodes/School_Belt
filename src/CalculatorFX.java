@@ -38,7 +38,7 @@ class CalculatorFX {
     /**
      * Constructor that loads up the calculator.
      */
-    CalculatorFX(){ load(); }
+    CalculatorFX() { load(); }
 
     /**
      * The load function to build the calculator.

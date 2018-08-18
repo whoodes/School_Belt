@@ -43,12 +43,12 @@ public class TextEditorFX {
     /**
      * Constructor for a TextEditor
      */
-    public TextEditorFX(){ load(); }
+    public TextEditorFX() { load(); }
 
     /**
      * A method to load up the text editor.
      */
-    public void load(){
+    public void load() {
 
 
         //Create a TextArea and turn on the WrapText function//
@@ -125,6 +125,6 @@ public class TextEditorFX {
         root.setStyle("-fx-padding: 10 20 10 20; -fx-border-color: black;");
     }
 
-    public BorderPane getRoot(){ return root; }
+    public BorderPane getRoot() { return root; }
 
 }

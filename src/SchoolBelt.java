@@ -15,9 +15,10 @@ public class SchoolBelt extends Application {
     private GridPane root = new GridPane();
     private HBox buttonBox = new HBox(20);
     private Button calcButton = new Button("Simple Calculator");
-    private Button textButton = new Button("Simple Text Editor");
+    private Button textButton = new Button("Take Notes");
+    private Button quadButton = new Button("Quadratic Calculator");
 
-    public void start(Stage stage){
+    public void start(Stage stage) {
 
         //Open CalculatorFX with this button.
         calcButton.setOnAction(e -> {
@@ -36,19 +37,25 @@ public class SchoolBelt extends Application {
             textStage.show();
         });
 
+        quadButton.setOnAction(e -> {
+            QuadraticFX quad = new QuadraticFX();
+            Stage quadStage = new Stage();
+            quadStage.setScene(new Scene(quad.getRoot()));
+            quadStage.show();
+        });
 
-        buttonBox.getChildren().addAll(calcButton, textButton);
+
+        buttonBox.getChildren().addAll(calcButton, quadButton, textButton);
         root.add(buttonBox, 1, 3);
 
         buttonBox.setAlignment(Pos.CENTER);
-        root.setHgap(55);
-        root.setVgap(10);
-        Scene scene = new Scene(root, 400, 400);
+        root.setStyle("-fx-fill-width: true; -fx-fill-height: true; -fx-padding: 20px 20px 20px 20px; -fx-alignment: center");
+        Scene scene = new Scene(root);
 
         stage.setTitle("School Belt");
         stage.setScene(scene);
-        stage.setHeight(250);
-        stage.setResizable(false);
+        stage.setX(0);
+        stage.setY(0);
         stage.show();
     }
 
