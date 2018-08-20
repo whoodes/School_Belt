@@ -74,20 +74,26 @@ public class QuadraticFX {
                 double root1;
                 double root2;
 
+                DecimalFormat rootFormat = new DecimalFormat("#.###");
+
                 if(discriminant < 0) {
                     result.setText("No Real solution");
                 }else if(discriminant == 0 ){
+
                     root1 = (bValue * -1) / (2 * aValue);
-                    result.setText("One Real solution: " + Double.toString(root1));
+                    double fRoot1 = Double.valueOf(rootFormat.format(root1));
+                    result.setText("One Real solution: " + Double.toString(fRoot1));
+
                 }else {
+
                     root1 = (-bValue + Math.sqrt(discriminant)) / (2 * aValue);
                     root2 = (-bValue - Math.sqrt(discriminant)) / (2 * aValue);
 
-                    DecimalFormat rootFormat = new DecimalFormat("#.###");
                     double fRoot1 = Double.valueOf(rootFormat.format(root1));
                     double fRoot2 = Double.valueOf(rootFormat.format(root2));
 
                     result.setText("Two Real solutions: " + Double.toString(fRoot1) + ", " + Double.toString(fRoot2));
+
                 }
 
             } catch (Exception ex) {
