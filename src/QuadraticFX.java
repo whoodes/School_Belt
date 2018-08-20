@@ -10,6 +10,8 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.TilePane;
 
+import java.text.DecimalFormat;
+
 
 public class QuadraticFX {
 
@@ -45,11 +47,13 @@ public class QuadraticFX {
         constant.setStyle("-fx-pref-width: 50px");
         root.add(equationBox, 0, 0);
 
+        equals.setOnAction(new computeHandle());
         equalsBox.getChildren().add(equals);
         equalsBox.setAlignment(Pos.CENTER);
         root.add(equalsBox, 0, 1);
 
         resultBox.getChildren().add(result);
+        root.add(resultBox, 0, 2);
 
         root.setVgap(25);
 
@@ -57,15 +61,37 @@ public class QuadraticFX {
 
     public GridPane getRoot() { return root; }
 
-    private class compute implements EventHandler<ActionEvent> {
+    private class computeHandle implements EventHandler<ActionEvent> {
 
         public void handle(ActionEvent e) {
 
             try {
-                //Code
+
+                double aValue = Double.parseDouble(secondDegree.getText());
+                double bValue = Double.parseDouble(firstDegree.getText());
+                double cValue = Double.parseDouble(constant.getText());
+                double discriminant = (bValue * bValue) - (4 * aValue * cValue);
+                double root1;
+                double root2;
+
+                if(discriminant < 0) {
+                    result.setText("No Real solution");
+                }else if(discriminant == 0 ){
+                    root1 = (bValue * -1) / (2 * aValue);
+                    result.setText("One Real solution: " + Double.toString(root1));
+                }else {
+                    root1 = (-bValue + Math.sqrt(discriminant)) / (2 * aValue);
+                    root2 = (-bValue - Math.sqrt(discriminant)) / (2 * aValue);
+
+                    DecimalFormat rootFormat = new DecimalFormat("#.###");
+                    double fRoot1 = Double.valueOf(rootFormat.format(root1));
+                    double fRoot2 = Double.valueOf(rootFormat.format(root2));
+
+                    result.setText("Two Real solutions: " + Double.toString(fRoot1) + ", " + Double.toString(fRoot2));
+                }
 
             } catch (Exception ex) {
-                System.out.println("Oops..");
+                result.setText("Oops..");
             }
 
         }
