@@ -5,9 +5,9 @@ Both the CalculatorFX and TextEditorFX have been cleaned up and restructured
 to be utilized as objects by the SchoolBelt Class.
 
 Features I intend to add, include:
--A quadratic formula calculator
--A simple mathematic expression evaluator, e.g., 5 + (6 -2) / (2 + 2)
--A loan calculator
+- A quadratic formula calculator
+- A simple mathematic expression evaluator, e.g., 5 + (6 -2) / (2 + 2)
+- A loan calculator
 
 As well as other useful little tools I can think of.
 
