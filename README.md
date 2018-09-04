@@ -1,4 +1,4 @@
-This is a simple javaFX program that incorporates the simple calculator and
+This is a simple JavaFX program that incorporates the simple calculator and
 text editor from my other repos.
 
 Both the CalculatorFX and TextEditorFX have been cleaned up and restructured
