@@ -24,4 +24,4 @@ As well as other useful little tools I can think of.
 The idea for this came about by wanting a fun one-stop-shop for simple tasks,
 while still being plausible for a 1st to 2nd year CS major.
 
-### <a href="https://whoodes.github.io/School_Belt/"><i class="github icon"></i>whoodes/School_Belt</a>
+### <a href="https://github.com/whoodes/School_Belt/"><i class="github icon"></i>whoodes/School_Belt</a>
