@@ -10,5 +10,3 @@ The calculator simply takes in two numbers and allows the user to perform an ele
 
 This project helped me gain further insight into object oriented programming, as well as constructing an organized GUI with multiple classes.  The project presented a fun challenge in terms of taking separate smaller projects and ideas and bringing them together into one cohesive unit.  I also gained valuable introductory experience into GitHub, as I played around with loosely keeping up with version control.  If anything, I gathered a better understanding of the importance of DVCS.
 
-
-### <a href="https://github.com/whoodes/School_Belt/"><i class="github icon"></i>whoodes/School_Belt</a>
