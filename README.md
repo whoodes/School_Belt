@@ -2,7 +2,7 @@
 
 This project came about after writing a few dis-joint programs, then realizing that putting all of theses classes under the same roof could result in something neat.  The application was written as a javaFX GUI with an initial window that currently displays three buttons:
 
-<img src="/images/tool-belt.png"/>
+<img class="ui small centered" src="/images/tool-belt.png"/>
 
 - one for a simple calculator
 <img src="/images/simple-calc.png"/>
