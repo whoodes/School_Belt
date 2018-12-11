@@ -5,8 +5,13 @@ This project came about after writing a few dis-joint programs, then realizing t
 <img src="/images/tool-belt.png"/>
 
 - one for a simple calculator
+<img src="/images/simple-calc.png"/>
+
 - another for a quadratic equation solver
+<img src="/images/quad-calc"/>
+
 - and a simple text editor  
+<img src="/images/take-notes"/>
 
 The calculator simply takes in two numbers and allows the user to perform an elementary operation on them.  I would like to eventually update this to have a single textfield that takes in an entire expression into a stack and then evaluates.  The quadratic equation solver allows the user to put in the values for a quadratic equation, click solve, and see one of the three possible outcomes of either no Real solution, one solution, or two solutions.  And finally the text editor, allows for simple note taking with "open file" and "save file"  options, each with corresponding keyboard shortcuts.
 
